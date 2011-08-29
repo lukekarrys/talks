@@ -1,0 +1,30 @@
+/*
+	pik5-presenter.css
+	Slide modifications for the presenter view. Don't edit this file unless you think you know what you are doing.
+*/
+
+/* Notes */
+.pik5-notes {
+	font-size:0.9em;
+	background:#FFF;
+	color:#000;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	display:block;
+}
+.pik5-slide img {display:none}
+.pik5-notes::before {
+	content:"Notes";
+	font-weight:bold;
+	background:#FFF;
+	display:block;
+	padding:0.5em 1em 0 1em;
+}
+.pik5-notes a {
+	color:#000 !important;
+}
+.pik5-notes:hover {
+	opacity:0.1;
+}
