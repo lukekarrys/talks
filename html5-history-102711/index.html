@@ -874,6 +874,7 @@ $('a').click(function() {
  
           current: 0,
           next: function() {
+            if (!this.current) this.current = 1;
             if (!this._slides[this.current-1].buildNext()) {
               this.current = Math.min(this.current + 1, this._slides.length);
               this._update();
@@ -955,12 +956,6 @@ $('a').click(function() {
  
         // Initialize
         var slideshow = new SlideShow(query('.slide'));
-
-        document.querySelector('#toggle-counter').addEventListener('click', toggleCounter, false);
-        document.querySelector('#toggle-size').addEventListener('click', toggleSize, false);
-        document.querySelector('#toggle-transitions').addEventListener('click', toggleTransitions, false);
-        document.querySelector('#toggle-gradients').addEventListener('click', toggleGradients, false);
- 
         var counters = document.querySelectorAll('.counter');
         var slides = document.querySelectorAll('.slide');
  
