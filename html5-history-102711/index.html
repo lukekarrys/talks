@@ -436,7 +436,7 @@
           <div class="slide"> 
             <section class="middle"> 
               <header> <h2>I helped make this</h2> </header> 
-              <a href="http://www.rituxan.com/ra/hcp/about/index.html"><img width="860" src="http://f.cl.ly/items/2l2W212j2h1w2p1G071b/Screen-Shot-2011-10-27-at-3.06.02-PM.png" /></a>
+              <a href="http://www.rituxan.com/ra/hcp/about/index.html"><img width="860" src="http://f.cl.ly/items/0j0u3k3w2J34311O3z0Y/Screen-Shot-2011-10-27-at-3.06.02-PM.png" /></a>
             </section> 
           </div>
           <div>
@@ -497,7 +497,8 @@
               <li>Do you want to hashbang?</li>
               <li>Buggy browser implementations</li>
               <li>Event binding</li>
-              <li>Not fast enough</li>
+              <li>The easy way isn't the best way</li>
+              <li>There will be blood (and complications)
             </ul> 
           </section> 
         </div>
@@ -512,6 +513,7 @@
               <li>Use a (well tested) library</li>
               <li>Make it automatic</li>
               <li>Don't do it all with JS</li>
+              <li>Plan, plan, plan</li>
             </ul> 
           </section> 
         </div>
@@ -519,7 +521,7 @@
          <div class="slide"> 
             <section class="middle"> 
               <header> 
-                <h2>To Hashbang or not to hashbang?</h2> 
+                <h2>To hashbang or not to hashbang?</h2> 
               </header> 
               <ul> 
                 <li>Is it a site? Or an app?</li>
@@ -540,28 +542,58 @@
           </div>
           
           <div class="slide"> 
-            <section class="middle"> 
+            <section class=""> 
               <header> 
                 <h2>Event binding</h2> 
               </header> 
               <ul>
               <li>Delegate as much as possible</li>
+              <pre>$('#content').delegate('a.callout', 'click', fn);</pre>
               <li>When you can't, use context specific JS</li>
+              <pre>$('.new-el', newContext).yourSpecialJS();</pre>
               <li><a href="https://github.com/lukekarrys/jquery-readyQueue-plugin">I wrote a plugin to help!</a></li>
+<pre>
+$(function() {
+  $('p', this).each(function() {
+    $(this).css('background', 'red');
+  });
+}, true);
+</pre>
               </ul>
+            </section> 
+          </div>
+          
+          <div class="slide"> 
+            <section class=""> 
+              <header> 
+                <h2>You can do it all with JS
+                  <br/>(but don't!)</h2> 
+              </header>
+<pre>
+// Too easy...
+$('a').click(function() {
+  $('#content).empty().load(this.href + ' #content');
+  return false;
+});
+</pre>
+              <p>Serve <em>only</em> content that you will display</p>
+              <ul class="bulleted" style="text-align:left;margin-left:20px;">
+                <li>Less bandwidth</li>
+                <li>Browser won't request assets that you don't use</li>
+                <li>Less client side parsing with JavaScript</li>
+                </ul>
             </section> 
           </div>
           
           <div class="slide"> 
             <section class="middle"> 
               <header> 
-                <h2>You can do it all with JS (but don't!)</h2> 
+                <h2>It could get messy</h2> 
               </header> 
-              <p>Serve only the content that you will display</p>
               <ul class="bulleted" style="text-align:left;margin-left:20px;">
-                <li>Server less bytes</li>
-                <li>Browser won't request assets that you aren't using</li>
-                <li>Less client side parsing with JavaScript</li>
+                <li>Architect every feature with History API in mind</li>
+                <li>Don't get more complicated than you need to</li>
+                <li>Last fallback: blacklist certain URLs</li>
                 </ul>
             </section> 
           </div>
