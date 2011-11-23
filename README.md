@@ -5,3 +5,6 @@ I gave this talk at meltmedia based on what I learned from the jQuery Mobile key
 
 ## html5-history-102711/
 I gave this talk at Phx Tag Soup on October 27, 2011 about my recent experience with the HTML5 history API and possible pitfalls and solutions.
+
+## mm-beginning-js-072111/
+I gave this talk at a meltmedia monthly front-end meeting about our internal projects and how to structure JS modules for marketing sites.
