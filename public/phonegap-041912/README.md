@@ -4,9 +4,9 @@
 
 ### 0) Skipping ahead
 - Download and install Xcode
-- [Download PhoneGap](http://phonegap.com/download-thankyou) and run the installer in the iOS directory
+- [Download PhoneGap](http://phonegap.com/download) and run the installer in the iOS directory
 
-### 1) [Getting Started](http://phonegap.com/start)
+### 1) [Getting Started with iOS](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS)
 - Make a new Cordova based application in Xcode
 - Add Product Name and Identifier
 - Don't check 'Automatic Reference Counting'
@@ -28,10 +28,10 @@
 - [Learn the API](http://docs.phonegap.com/en/1.6.1/index.html)
 
 ### 5) What next?
-- Pick a different platform: [WP7](http://phonegap.com/start#wp), [Android](http://phonegap.com/start#android), [others](http://phonegap.com/start)
+- Pick a different platform: [WP7](http://docs.phonegap.com/en/1.6.1/guide_getting-started_windows-phone_index.md.html#Getting%20Started%20with%20Windows%20Phone), [Android](http://docs.phonegap.com/en/1.6.1/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android), [others](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS)
 - [Check out some "official" plugins](https://github.com/phonegap/phonegap-plugins)
 
-
+*Note: to run on an iOS device you will need a developer license and a valid Bundle Identifier. See instructions on [Deploy to Device](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS_5b_deploy_to_device).
 
 #### References
 - [http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/](http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/)
