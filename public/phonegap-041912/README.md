@@ -1,6 +1,4 @@
-# Some notes (let's live code this)
-
-## Hope I don't crash and burn.
+# Presentation notes
 
 ### 0) Skipping ahead
 - Download and install Xcode
@@ -24,3 +22,14 @@
 - add iOS/NativeControls/NativeControls.js to www dir
 
 ### 4) Just add JS Codez
+- It's just CSS, JS, HTML!
+- [Learn the API](http://docs.phonegap.com/en/1.6.1/index.html)
+
+### 5) What next?
+- Pick a different platform: [WP7](http://phonegap.com/start#wp), [Android](http://phonegap.com/start#android), [others](http://phonegap.com/start)
+- [Check out some "official" plugins](https://github.com/phonegap/phonegap-plugins)
+
+
+#### References
+- [http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/](http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/)
+- [http://phonegap.com/](http://phonegap.com/)

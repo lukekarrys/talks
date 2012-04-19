@@ -1,6 +1,6 @@
 # Various Talks I Have Given
 
-## [phonegap-041912/](https://github.com/lukekarrys/presentation-slides/tree/master/public/cordova-041912)
+## [phonegap-041912/](https://github.com/lukekarrys/presentation-slides/tree/master/public/phonegap-041912)
 I gave this talk at a meltmedia monthly dev show 'n' tell meeting about how to use PhoneGap to build an iPhone app out of JavaScript.
 
 ## [jquery-mobile-111711/](http://talks.lukecod.es/jquery-mobile-111711/)
