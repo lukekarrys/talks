@@ -1,7 +1,7 @@
 # Various Talks I Have Given
 
-## [cordova-041912/](http://talks.lukecod.es/cordova-041912/)
-I gave this talk at a meltmedia monthly dev show 'n' tell meeting about how to use PhoneGap/Cordova to build an iPhone app out of JavaScript.
+## [phonegap-041912/](https://github.com/lukekarrys/presentation-slides/tree/master/public/cordova-041912)
+I gave this talk at a meltmedia monthly dev show 'n' tell meeting about how to use PhoneGap to build an iPhone app out of JavaScript.
 
 ## [jquery-mobile-111711/](http://talks.lukecod.es/jquery-mobile-111711/)
 I gave this talk at meltmedia based on what I learned from the jQuery Mobile keynote at the jQuery Conference in Boston (2011). Just happened to be on the same day as 1.0 was released.
