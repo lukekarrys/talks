@@ -31,7 +31,7 @@
 - Pick a different platform: [WP7](http://docs.phonegap.com/en/1.6.1/guide_getting-started_windows-phone_index.md.html#Getting%20Started%20with%20Windows%20Phone), [Android](http://docs.phonegap.com/en/1.6.1/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android), [others](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS)
 - [Check out some "official" plugins](https://github.com/phonegap/phonegap-plugins)
 
-*Note: to run on an iOS device you will need a developer license and a valid Bundle Identifier. See instructions on [Deploy to Device](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS_5b_deploy_to_device).
+*Note: to run on an iOS device you will need a developer license and a valid Bundle Identifier. See instructions on [Deploy to Device](http://docs.phonegap.com/en/1.6.1/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS_5b_deploy_to_device).*
 
 #### References
 - [http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/](http://www.dreamintech.net/2011/11/how-to-setup-and-use-nativecontrols-in-phonegap/)
