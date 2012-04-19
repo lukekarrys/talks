@@ -1,5 +1,7 @@
 # Presentation notes
 
+## [Demo Source](https://github.com/lukekarrys/phonegap-pres-demo)
+
 ### 0) Skipping ahead
 - Download and install Xcode
 - [Download PhoneGap](http://phonegap.com/download-thankyou) and run the installer in the iOS directory
@@ -28,6 +30,7 @@
 ### 5) What next?
 - Pick a different platform: [WP7](http://phonegap.com/start#wp), [Android](http://phonegap.com/start#android), [others](http://phonegap.com/start)
 - [Check out some "official" plugins](https://github.com/phonegap/phonegap-plugins)
+
 
 
 #### References
