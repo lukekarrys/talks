@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pik5 - HTML5 presentation framework</title>
+	<meta http-equiv="expires" content="0"> <!-- DO NOT DELETE THIS! -->
+	<link rel="stylesheet" href="assets/prettify/prettify.css"> <!-- You can remove this if your presentation is not about programming -->
+	<link rel="stylesheet" media="screen, projection" href="assets/css/pik5.css"> <!-- DO NOT DELETE THIS! -->
+	<link rel="stylesheet" media="screen, projection" href="themes/pik5/style.css"> <!-- Change this to style your presentation -->
+	<link rel="stylesheet" media="print" href="themes/pik5/print.css"> <!-- Use this to make your presentation print well -->
+	<script> var pik5_base_dir = ''; </script> <!-- Change this if this presentation file is NOT in the same folder as all other P5 files and folders -->
+	<script src="assets/prettify/prettify.js"></script> <!-- You can remove this if your presentation is not about programming -->
+	<script src="assets/js/jquery.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="assets/js/jquery.color.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="assets/js/shared.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="assets/js/pik5.js"></script> <!-- DO NOT DELETE THIS! -->
+	<script src="custom.js"></script> <!-- Use this for your own slide programming -->
+	<base target="_blank">
+</head>
+<body onload="prettyPrint()"> <!-- You can remove the onload property if your presentation is not about programming -->
+
+
+<div id="header">
+	<h1>JS Tips, Tricks &amp; Best Practices</h1>
+</div>
+
+
+<div id="frame"> <!-- DO NOT DELETE THIS! -->
+
+
+<div id="framecontainer"> <!-- DO NOT DELETE THIS! -->
+
+
+<div class="pik5-slide" id="start">
+	<h2>JavaScript Tips, Tricks &amp; Best Practices</h2>
+	<p>For meltmedia Marketing Sites</p>
+		<div class="pik5-notes">
+Not going to go over too much JS syntax. More of things that you might see or need to do when developing JS for our marketing sites
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>File Organization For Marketing Sites</h2>
+	<ul>
+		<li>Most JS code can be divided into 3 categories:</li></ul>
+		<ol>
+		
+		<li>Files that need to be on every page</li>
+		<li>Files used by multiple components but not all pages</li>
+		<li>Files used by only one component</li>
+	</ol>
+	<div class="pik5-notes">
+	Lots of possible overlap here. Some code for only one component can be on every page. Think about logical groups
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Files For All Pages</h2>
+	<img src="assets/images/all-the-pages.png" alt="Include on all the pages!" class="slide-image" />
+	<ul>
+		<li>Files go in <code>/js</code></li>
+		<li>Referenced by <code>jsGlobal</code> in <code>themeName.json</code> from site root</li>
+		<li>Examples: libraries</li>
+	</ul>
+	<pre class="prettyprint">
+  {
+    "name" : "themeName",
+    "jsGlobal" : [
+    	"js/prototype.js",
+    	"js/jquery-1.5.1.min.js",
+    	"js/jquery.noconflict.js",
+    	"js/jquery-ui-1.8.12.custom.min.js"
+    ]
+  }
+	</pre>
+	<div class="pik5-notes">
+	<p>There may be other code that needs to be executed on every page but this should be for files whose logical group is "site-wide" rather than belonging to a plugin.</p>
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Files Shared By Multiple Components</h2>
+	<ul>
+		<li>Files go in <code>/js</code></li>
+		<li>Referenced by <code>jsGlobal</code> in <code>componentName.json</code> from site root</li>
+		<li>Examples: shared plugins, video players, etc</li>
+  </ul>
+  <pre class="prettyprint">
+  {
+    "componentId" : "componentName",
+    "jsGlobal" : [
+      "js/jakebox.js",
+      "js/jqModal.js"
+    ]
+  }
+	</pre>
+	<div class="pik5-notes">
+	<p>This code should be more likely to be associated with multiple plugins. Some code can straddle the line between these two. Make the best decision possible based on the use of the script on the current site.</p>
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Files Specific to a Component</h2>
+	<ul>
+		<li>Files go in <code>/lib/components/componentName/js</code></li>
+		<li>Referenced by <code>js</code> in <code>componentName.json</code> from component root</li>
+	</ul>
+	<pre class="prettyprint">
+  {
+    "componentId" : "componentName",
+    "jsGlobal" : [
+      "js/jakebox.js",
+      "js/jqModal.js"
+    ],
+    "js" : ["js/mediaCenterComponent.js"]
+  }
+	</pre>
+	<div class="pik5-notes">
+	  <p>Rule to be safe: If you are writing code for a plugin, put it here</p>
+	    </div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Does File Order Matter?</h2>
+	<ul>
+	 <li>Yes. Whenever possible use this as a guide to what will come first</li>
+	</ul>
+	<ol>
+	 <li>Scripts that change visible nature of page</li>
+	 <li>Scripts that directly affect content areas</li>
+	 <li>Scripts that directly affect navigation, headers, footers</li>
+	 <li>Scripts that add event handlers</li>
+	 <li>Third party tracking, analytics</li>
+	</ol>
+	<p><em>Note: you will still need to include any libraries/plugins before you use them elsewhere</em></p>
+	<div class="pik5-notes">
+	 <ol>
+	   <li>pngfixes, font adjustments</li>
+	   <li>superscript or glossary plugins</li>
+	   <li>suckerfish</li>
+	   <li>Anything you will click on</li>
+	 </ol>
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Avoid Script Tags</h2>
+	<ul>
+	 <li>Put it in a file! Avoid <code>&lt;script&gt;</code> tags in your <code>&lt;body&gt;</code></li>
+	</ul>
+	<pre class="prettyprint">
+    &lt;body&gt;
+      &lt;script type="text/javascript"&gt;
+        /* Any code in here will 
+        block page rendering until it's done */
+      &lt;/script&gt;
+    &lt;/body&gt;
+	</pre>
+		<div class="pik5-notes">
+<p>This is easy to do with our component system since everything has a body.html but please refrain</p>
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Avoid Globals</h2>
+	<img src="assets/images/global-vars.jpg" alt="Use global variables and you will be forever alone" class="slide-image" />
+  <ul>
+    <li>Don't make it global! Avoid polluting the <code>global namespace</code> with <code>variables</code></li>
+  </ul>
+  <pre class="prettyprint">
+    var x = 0, y = 10; 
+    function doSomething(x) { }
+    function doSomethingElse(y) { }
+	</pre>
+	<ul><li>That's 4 declarations to the global namespace</li>
+	<li>That's twice as many as jQuery has for ~9000 lines of code</li></ul>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Object Literals</h2>
+	<ul>
+	 <li>Don't worry! There are better ways!</li>
+	 <li>Does it need to be accessed by other code on the site? Use an <code>object literal</code></li>
+	</ul>
+	<img src="assets/images/one-global-var.png" alt="Did you use just one global variable? F*** Yea!" class="slide-image" style="width: 400px" />
+	<pre class="prettyprint">
+  var siteName = {
+    config: {
+      x: 0,
+      y: 10
+    },
+    doSomething: function(x) {},
+    doSomethingElse: function(y) {}
+  };
+  // Later...
+  siteName.anotherFunction = function() {};
+	</pre>
+	<div class="pik5-notes">
+  These can be nested as far as you want, but don't do it more than is necessary or logical
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Use a SEAF</h2>
+	<ul>
+	 <li>If it doesn't need to be accessed by other code wrap it in a <code>self executing anonymous function</code></li>
+  </ul>
+	<pre class="prettyprint">
+  (function() {
+    var imLocal = true,
+        meToo = 'wooHoo';
+        
+    function doSomething() {}
+    function anotherFunc() {}
+  })();
+	</pre>
+	<div class="pik5-notes">
+  This is similar to wrapping code in $(document).ready(). It keeps declarations out of the global scope.
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Pass <code>window</code> to your SEAF</h2>
+	<ul>
+	 <li>Passing oft used variables to your SEAF makes them local which has many benefits</li>
+	</ul>
+	<pre class="prettyprint">
+  (function(window, $) {
+    /* Using local window like a boss
+    Speeds up lookups
+    Better gzip and minification */
+  })(window, jQuery);
+	</pre>
+	<div class="pik5-notes">
+  Not absolutely necessary, but a good practice and good to know what it is when you see it.
+  Might not be necessary if all your code is already wrapped in a $(document).ready
+	</div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Make <code>variables</code> not war</h2>
+	<ul>
+		<li>Always use the <code>var</code> keyword (if you don't, it's global!)</li>
+		<li>Use <code>var</code> to declare multiple variables</li>
+	</ul>
+  <pre class="prettyprint">
+  /* Bad */
+  var count = 0;
+  var length = 10;
+  var words = 'Words words words';
+  
+  /* Good */
+  var count = 0,
+      length = 10,
+      words = 'Words words words';
+  </pre>
+  <div class="pik5-notes">
+  Improves readability, best practices to put single var declaration at the top of each function
+  </div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Cache Once, Use Whenever</h2>
+	<ul>
+    <li>Make a variable for anything that will be used often</li>
+	</ul>
+  <pre class="prettyprint">
+  if ($('#header').is(':visible')) {
+    $('#header').hide();
+  } else {
+    $('#header').show();
+  }
+  // Instead...
+  var $header = $('#header');
+  if ($header.is(':visible')) {
+    $header.hide();
+  } else {
+    $header.show();
+  }
+  </pre>
+  <div class="pik5-notes">
+  Doing DOM lookups, calculations is expensive. Store the result, be happy
+  </div>
+</div>
+
+<div class="pik5-slide">
+	<h2>Run in a Browser</h2>
+	<ul>
+    <li><code>window.onload</code> vs <code>$(document).ready()</code></li>
+    <li><code>window.onload</code> will not run until all resources have been loaded (including images)</li>
+    <li><code>$(document).ready()</code> will run once the <code>DOM</code> is ready (much sooner)</li>
+	</ul>
+  <pre class="prettyprint">
+  window.onload = function() {
+    /* I'm going to wait for everything on the page */
+  };
+  
+  $(document).ready(function() {
+    /* I will run once the DOM is ready to be worked with */
+  });
+  </pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Progressive Enhancement</h2>
+	<ul>
+	 <li>JavaScript should be used to enhance, not create functionality*</li>
+	</ul>
+  <pre class="prettyprint">
+  /* Bad, bad, bad 
+  Nothing will happen without JavaScript!
+  */
+  &lt;!-- HTML --&gt;
+  &lt;a href="#" onclick="openSafetyInformation();"&gt;Safety&lt;/a&gt;
+  
+  /* JS */
+  function openSafetyInformation() {
+    $('#safety-info').show();
+    return false;
+  }
+  </pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>Progressive Enhancement</h2>
+  <pre class="prettyprint">
+  /* Good */
+  &lt;!-- HTML --&gt;
+  &lt;a href="safety.html" id="safety-btn"&gt;Safety&lt;/a&gt;
+  
+  /* JS overrides normal link behavior */
+  $('#safety-btn').click(function() {
+    $('#safety').load('safety.html', function() {
+      $(this).show();
+    });
+  });
+  </pre>
+  <p><em>*Note: Obviously some things can't be done without JavaScript but a fallback should be in place whenever possible</em></p>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Don't Do Too Much With JavaScript</h2>
+	<img src="assets/images/y-u-no.jpg" alt="Y U NO LET HTML AND CSS DO THEIR JOBS?" class="slide-image" style="width" />
+	<ul>
+	 <li>JavaScript can write your HTML, add CSS to it and make it interactive</li>
+	</ul>
+	<pre class="prettyprint">
+  /* You know how to 
+  do this correctly */
+  var emailForm = $('&lt;form/&gt;')
+    .attr('action', '/search')
+    .css({'padding':'10px','background':'#000'});
+  var toLabel = $('&lt;label/&gt;')
+    .text('To')
+    .css({'border':'1px solid #000'})
+    .appendTo(emailForm);
+  emailForm.appendTo('#emailArea');
+  </pre>
+  <div class="pik5-notes">
+  <p>Write all your css classes, use JavaScript to toggle them</p>
+  </div>
+</div>
+
+
+<div class="pik5-slide">
+	<h2>Vonnegut Was Wrong; Use Semicolons</h2>
+	<ul>
+    <li>Semicolons are not required but leaving them out can cause unexpected results</li>
+    <li>Always use curly braces</li>
+    <li>The use of both improve readability, remove ambiguity</li>
+	</ul>
+  <pre class="prettyprint">
+  /* This is valid but frowned upon */
+  if (testCondition) runThisCode()  
+  
+  /* How about this instead? */
+  if (testCondition) {
+    runThisCode();
+  }
+  </pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>jQuery Awesomesauce</h2>
+	<img src="assets/images/bowser.png" alt="IE6 has us. Save us Mario!" class="slide-image" style="width: 40%" />
+	<ul>
+    <li><code>jQuery = $;</code></li>
+    <li>We are the Princess, jQuery is Mario, IE6 is Bowser</li>
+    <li>Top 3 Features of jQuery To Make Your JS Life Easier
+    	<ol>
+	 <li>Selectors: CSS 1-3 + MOAR!</li>
+	 <li>Chaining: Use multiple methods on one element</li>
+	 <li>Ajax: It used to be hard, now it's one line</li>
+	</ol></li>
+	</ul>
+</div>
+
+<div class="pik5-slide">
+	<h2>jQuery Selectors</h2>
+	<ul>
+    <li><a href="http://api.jquery.com/category/selectors/">List of Selectors</a></li>
+    <li>Difficult, complicated to implement these cross-browser in pure JavaScript</li>
+    <li><code>jQuery</code> helps us out</li>
+	</ul>
+  <pre class="prettyprint">
+  $('div.myClass'); // All divs with a class of 'myClass'
+  $('div:animated'); // All divs that are being animated
+  $('input[name*="man"]'); /* All inputs with a name 
+    attribute that contains 'man' */
+  $('p:hidden'); // All paragraphs that are hidden
+  $('td:eq(2)'); // The third td
+  </pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>jQuery Chaining</h2>
+	<ul>
+    <li>John Resign said it was his biggest <a href="http://www.reddit.com/r/IAmA/comments/h42ak/i_am_john_resig_creator_of_jquery_ama/c1seq3w">AHA! moment</a> when creating <code>jQuery</code></li>
+    <li>Allows you to chain <code>jQuery</code> methods since most of them return themselves</li>
+	</ul>
+  <pre class="prettyprint">
+  /* Example Time */
+  $('#header') // Find element with id of 'header'
+  .slideDown(400) // Animate it sliding down over 400ms
+  .css('background','red') // Change background to red
+  .addClass('active') // Add class active
+  .wrap('&lt;div/&gt;'); // Wrap it in a div
+  
+  /* Could also be all on one line */
+  </pre>
+</div>
+
+<div class="pik5-slide">
+	<h2>jQuery Ajax</h2>
+	<ul>
+    <li><code><a href="http://api.jquery.com/category/ajax/">$.ajax()</a></code> Cross-browser, simple, powerful</li>
+    <li>Shortcut methods for almost anything</li>
+    <li>Easy callbacks</li>
+	</ul>
+  <pre class="prettyprint">
+  // GET (shortcut method) all the raw data from test.html
+  $.get('test.html', function(data) {
+    // This will fire once the call is finished
+    console.log(data);
+  });
+  
+  // Grab all data from a form, POST to test.php
+  $.post("test.php", $('#formId').serialize() );
+  </pre>
+</div>
+
+
+
+
+<div class="pik5-slide" id="end">
+	<h2>Tools</h2>
+	<ul>
+		<li><a href="http://jsfiddle.net/">jsFiddle</a></li>
+		<li><a href="http://jsbin.com/">jsBin</a> (props to rtorr)</li>
+		<li><a href="https://github.com/borismus/DevTools-Lab/blob/master/cheatsheet/chromedev-cheatsheet.png">Chrome Web Inspector Cheatsheet</a></li>
+	</ul>
+	<div class="pik5-notes">
+	Web Inspector: breakpoints, console
+	</div>
+</div>
+
+
+</div> <!-- End #framecontainer. DO NOT DELETE THIS! -->
+
+
+</div> <!-- End #frame. DO NOT DELETE THIS! -->
+
+<script>
+    var _gaq=[['_setAccount','UA-8402584-4'],['_setDomainName','lukecod.es'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+</body>
+</html>
+
