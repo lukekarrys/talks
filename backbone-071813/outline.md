@@ -22,8 +22,8 @@ Everything I show you can be added to the proper Backbone type (Model, Collectio
 ```
 // Replace `Model` with `View` or `Collection`
 var BaseModel = Backbone.Model.extend({
-  override: function () {
-    // Available to anything using base models
+  overrideThisFunction: function () {
+    // Available to anything extending BaseModel
   }
 });
 ```
@@ -72,7 +72,7 @@ var BaseModel = Backbone.Model.extend({
 ### parse
 
 If you are dealing with legacy APIs or systems you don't control,
-parse can help you normalize all your data
+parse can help you normalize your data.
 
 ```
 var BaseModel = Backbone.Model.extend({
@@ -148,6 +148,7 @@ var BaseView = Backbone.View.extend({
     var currentEl = this.el;
     if (this.template) this.setElement(this.template(context || {}));
     $(currentEl).replaceWith(this.el);
+    this.hideLoading();
     // Anything else you want to do on every view
     this.handleBindings();
   }
@@ -170,9 +171,8 @@ var BaseView = Backbone.View.extend({
                 method = el.is('input, select, textarea') ? 'val' : 'html';
             el[method](self.model.get(key));
           };
-        self.listenTo(self.model, 'change:' + key, func);
-        func();
-      });
+      self.listenTo(self.model, 'change:' + key, func);
+      func();
     });
   }
 });
