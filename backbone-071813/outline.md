@@ -2,14 +2,16 @@
 
 ## Intro
 
-Models
+*Models*
 - Key/value bindings
 - Built in events
 - Easy custom events
-Collections
+
+*Collections*
 - Groups of models
 - Built in enumerable functions
-Views
+
+*Views*
 - Declarative event handling
 - Bind API data to DOM (via models, collections)
 
@@ -24,6 +26,7 @@ var BaseModel = Backbone.Model.extend({
     // Available to anything using base models
   }
 });
+```
 
 ## Super
 
