@@ -1,5 +1,8 @@
 # Various Talks I Have Given
 
+## [Backbone: Tips & Tricks @ TriConf/](/talks/backbone-071813/index.html)
+A talk at [TriConf 2013](http://triconf.com) about Tips and Tricks in Backbone and ways to make it less cumbersome in web apps.
+
 ## [phonegap-041912/](/talks/phonegap-041912/README.md)
 I gave this talk at a meltmedia monthly dev show 'n' tell meeting about how to use PhoneGap to build an iPhone app out of JavaScript.
 
