@@ -188,7 +188,7 @@ var NewView = BaseView.extend({
 
 ### pages
 
-In a single page app, you will want to abstract away the ability to switch pages
+
 
 ```
 var PageView = BaseView.extend({
