@@ -456,6 +456,7 @@
                   );
 
                   // Broadcast all child events to parent
+                  // TODO: Clean this up, sorry
                   this.listenTo(this[key], 'all', function () {
                     var _args = _.toArray(arguments),
                     childEvents = _args.slice(0, 1).join('').split(':'),
@@ -480,8 +481,10 @@
           <aside class="notes">
             One thing I've tried to hack into a Backbone app of mine, was nested models. So Model A
             has the the data needed to fetch Model B. A lot of time I ended up with very tightly coupled
-            models. The initialize functions were a bevy of listeners and events. So we came up with this solution
+            models. The initialize functions were a bevy of listeners and events. So I came up with this solution
             to try and allow models to have nested models.
+            
+            Also sorry for this code, it's crazy and needs to be cleaned up.
           </aside>
         </section>
 
