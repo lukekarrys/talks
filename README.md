@@ -1,5 +1,8 @@
 # Various Talks I Have Given
 
+## [ How To Get Your Dream Job in 5000 Words or Fewer and Live in the Woods and Work on The Internet](https://github.com/lukekarrys/talks/tree/master/passion-072013)
+A talk at [TriConf 2013](http://triconf.com) about passion and purpose.
+
 ## [Backbone: Tips & Tricks @ TriConf/](/talks/backbone-071813/index.html)
 A talk at [TriConf 2013](http://triconf.com) about Tips and Tricks in Backbone and ways to make it less cumbersome in web apps.
 
