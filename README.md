@@ -1,5 +1,8 @@
 # Various Talks I Have Given
 
+## [Client Solutions from Development to Production](http://lukekarrys.github.io/nodesummit)
+A talk at [NodeSummit 2013](http://nodesummit.com) about using Node for solutions in development and production environments.
+
 ## [How To Get Your Dream Job in 5000 Words or Fewer and Live in the Woods and Work on The Internet](http://lukelov.es/talks/2013/07/21/passion-and-purpose.html)
 A talk at [TriConf 2013](http://triconf.com) about passion and purpose.
 
