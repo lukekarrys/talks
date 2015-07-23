@@ -1,6 +1,6 @@
 # Presentation notes
 
-## [Demo Source](https://github.com/lukekarrys/phonegap-pres-demo)
+## [Demo Source](https://github.com/lukekarrys/talks/blob/gh-pages/phonegap-041912/app/README.md)
 
 ### 0) Skipping ahead
 - Download and install Xcode
