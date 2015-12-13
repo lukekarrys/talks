@@ -30,7 +30,11 @@
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production grunt build",
-    "deploy": "git-directory-deploy --directory public",
-    "start": "NODE_ENV=development grunt serve"
+    "codeship-setup": "npm run npm-version && npm install && npm run build",
+    "codeship-test": "npm run validate",
+    "deploy": "git-directory-deploy --directory public --username lukekarrys --email lukekarrys@gmail.com --repo git@github.com:lukekarrys/talks.git --message='--skip-ci'",
+    "npm-version": "npm install -g npm@`cat package.json | jq -r '.engines.npm'`",
+    "start": "NODE_ENV=development grunt serve",
+    "validate": "npm ls >/dev/null"
   }
 }
