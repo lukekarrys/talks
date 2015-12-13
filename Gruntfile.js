@@ -5,8 +5,8 @@ Object.keys(talks).forEach((talk) => {
   var title = td.title;
   var location = td.location;
   var links = td.links;
-  var data = `extends ./_layout.jade
-include _talk.jade
+  var data = `extends ../_layout.jade
+include ../_talk.jade
 
 block content
   +talk(${JSON.stringify({title, location, links})})
