@@ -1,0 +1,114 @@
+{
+  "/fluentconf-native-web-apps-training": {
+    "location": "FluentConf 2015",
+    "title": "Native Web Apps Training",
+    "description": "A training at <a href='http://fluentconf.com/javascript-html-2015/public/schedule/grid/public'>FluentConf 2015</a> on building a modern, well-structured application from scratch by combining best-of breed approaches and a carefully curated set of tools like React, ES2015, Webpack, Node, and Ampersand. We built an <a href='https://github.com/HenrikJoreteg/labelr'>app</a>.",
+    "links": [
+      {
+        "title": "Detail",
+        "link": "http://fluentconf.com/javascript-html-2015/public/content/native-web-application"
+      }
+    ]
+  },
+  "/jsla-ampersandjs-a-non-frameworky-framework": {
+    "location": "JS.la Meetup October 2014",
+    "title": "Ampersand.js: A Non-Frameworky Framework",
+    "description": "A talk at the <a href='http://js.la'>js.la meetup</a> about the <a href='http://ampersandjs.com'>Ampersand.js</a> \"framework\".",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "http://lukekarrys.github.io/ampersand-jsla"
+      },
+      {
+        "title": "Video",
+        "link": "https://vimeo.com/111015781"
+      }
+    ]
+  },
+  "/triconf-the-10-most-important-things-ive-learned-ever": {
+    "location": "TriConf 2014",
+    "title": "The 10 Most Important Things I've Learned, Ever",
+    "description": "A talk at <a href='http://triconf.com'>TriConf 2014</a> about the most important things I've ever learned.",
+    "links": [
+      {
+        "title": "Video",
+        "link": "https://vimeo.com/album/3035784/video/105363841"
+      },
+      {
+        "title": "Slides",
+        "link": "/10-important-things-071913/slides.pdf"
+      }
+    ]
+  },
+  "/nodesummit-client-solutions-from-development-to-production": {
+    "location": "NodeSummit 2013",
+    "title": "Client Solutions from Development to Production",
+    "description": "A talk at <a href='http://nodesummit.com'>NodeSummit 2013</a> about using Node for solutions in development and production environments.",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "http://lukekarrys.github.io/nodesummit"
+      },
+      {
+        "title": "Video",
+        "link": "https://vimeo.com/93090402"
+      }
+    ]
+  },
+  "/triconf-passion-and-purpose": {
+    "location": "TriConf 2013",
+    "title": "How To Get Your Dream Job in 5000 Words or Fewer and Live in the Woods and Work on The Internet",
+    "description": "A talk at <a href='http://triconf.com'>TriConf 2013</a> about passion and purpose.",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "https://speakerdeck.com/lukekarrys/how-to-get-your-dream-job-in-5000-words-or-fewer-and-live-in-the-woods-and-work-on-the-internet"
+      },
+      {
+        "title": "Blog",
+        "link": "http://lukelov.es/articles/passion-and-purpose"
+      },
+      {
+        "title": "Video",
+        "link": "https://vimeo.com/70900013"
+      }
+    ]
+  },
+  "/triconf-backbone-tips-and-tricks": {
+    "location": "TriConf 2013",
+    "title": "Backbone: Tips &amp; Tricks @ TriConf",
+    "description": "A talk at <a href='http://triconf.com'>TriConf 2013</a> about Tips and Tricks in Backbone and ways to make it less cumbersome in web apps.",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "/backbone-071813"
+      },
+      {
+        "title": "Video",
+        "link": "https://vimeo.com/70679706"
+      }
+    ]
+  },
+  "/phx-tag-soup-html5-history": {
+    "location": "Phx Tag Soup Meetup October 2011",
+    "title": "HTML5 History, You, and How to Keep Your Hair When Working With It",
+    "description": "I gave this talk at Phx Tag Soup on October 27, 2011 about my recent experience with the HTML5 history API and possible pitfalls and solutions.",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "/html5-history-102711"
+      }
+    ]
+  },
+  "/meltmedia-js-tips-and-best-practices": {
+    "location": "meltmedia July 2011",
+    "title": "JS Tips and Best Practices",
+    "description": "I gave this talk at a meltmedia monthly front-end meeting about our internal projects and how to structure JS modules for marketing sites.",
+    "links": [
+      {
+        "title": "Slides",
+        "link": "/mm-beginning-js-072111"
+      }
+    ]
+  }
+}

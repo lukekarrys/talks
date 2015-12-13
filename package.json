@@ -2,6 +2,10 @@
   "name": "example-site",
   "description": "Workflow for static sites with Grunt.",
   "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bootswatch": "^3.3.6"
+  },
   "devDependencies": {
     "connect-livereload": "^0.5.3",
     "git-directory-deploy": "^1.1.0",

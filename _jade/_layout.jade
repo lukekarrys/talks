@@ -12,18 +12,13 @@ html(lang='en')
     meta(name='keywords', content='')
     meta(name='author', content='Luke Karrys')
 
-    link(rel='stylesheet', href='/css/bootstrap-theme.min.css')
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-
     link(rel='stylesheet', href='/css/main' + (env === 'production' ? '.min' : '') + '.css')
 
   body
-    header
-      .container
-        h1
-          a(href='/') Talks
-          |  by 
-          a(href='http://lukekarrys.com') Luke
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='/') Talks
 
     .container
       block content

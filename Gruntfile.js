@@ -1,3 +1,21 @@
+var talks = require('./talks.json');
+
+Object.keys(talks).forEach((talk) => {
+  var td = talks[talk];
+  var title = td.title;
+  var location = td.location;
+  var links = td.links;
+  var data = `extends ./_layout.jade
+include _talk.jade
+
+block content
+  +talk(${JSON.stringify({title, location, links})})
+    | ${td.description}
+
+`;
+  require('fs').writeFileSync(`_jade/talks/${talk}.jade`, data);
+})
+
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -51,7 +69,8 @@ module.exports = function(grunt) {
             target: {
                 options: {
                     data: {
-                        env: env
+                        env: env,
+                        talks: talks
                     }
                 },
                 files: [{
