@@ -1,0 +1,11 @@
+mixin talk(data)
+  .page-header
+    h2 !{data.title}
+    h4: span.label.label-default !{data.location}
+
+  .well
+    block
+
+  .btn-group
+    for link in data.links
+      a.btn.btn-default(href=link.link, target='_blank') !{link.name}
