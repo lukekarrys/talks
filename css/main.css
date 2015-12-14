@@ -7441,3 +7441,6 @@ input[type="checkbox"]:disabled:checked:after,
 .navbar {
   border-radius: 0 !important;
 }
+.list-group-item {
+  overflow: hidden;
+}
