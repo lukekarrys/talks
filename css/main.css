@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 /*!
- * bootswatch v3.3.6
+ * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
- * Copyright 2012-2015 Thomas Park
+ * Copyright 2012-2016 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1099,7 +1099,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2615,7 +2614,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3097,7 +3095,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6786,7 +6783,7 @@ button.close {
   box-shadow: inset 0 -2px 0 #ffffff;
 }
 .btn-default {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-default:focus {
@@ -6800,11 +6797,11 @@ button.close {
   background-color: #e0e0e0;
   background-image: radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-primary {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-primary:focus {
@@ -6818,11 +6815,11 @@ button.close {
   background-color: #0b76cc;
   background-image: radial-gradient(circle, #0b76cc 10%, #2196f3 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-success {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-success:focus {
@@ -6836,11 +6833,11 @@ button.close {
   background-color: #39843c;
   background-image: radial-gradient(circle, #39843c 10%, #4caf50 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-info {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-info:focus {
@@ -6854,11 +6851,11 @@ button.close {
   background-color: #701c7e;
   background-image: radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-warning {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-warning:focus {
@@ -6872,11 +6869,11 @@ button.close {
   background-color: #c27400;
   background-image: radial-gradient(circle, #c27400 10%, #ff9800 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-danger {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-danger:focus {
@@ -6890,11 +6887,11 @@ button.close {
   background-color: #b0141a;
   background-image: radial-gradient(circle, #b0141a 10%, #e51c23 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-link {
-  background-size: 200%;
+  background-size: 200% 200%;
   background-position: 50%;
 }
 .btn-link:focus {
@@ -6908,7 +6905,7 @@ button.close {
   background-color: #e0e0e0;
   background-image: radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
   background-repeat: no-repeat;
-  background-size: 1000%;
+  background-size: 1000% 1000%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn {
@@ -7287,6 +7284,10 @@ input[type="checkbox"]:disabled:checked:after,
   border-color: transparent;
   background-color: transparent;
 }
+.form-group-lg select,
+.form-group-lg select.form-control {
+  line-height: 1.5;
+}
 .nav-tabs > li > a,
 .nav-tabs > li > a:focus {
   margin-right: 0;
@@ -7348,7 +7349,7 @@ input[type="checkbox"]:disabled:checked:after,
 .alert-danger {
   background-color: #e51c23;
 }
-.alert a:not(.close),
+.alert a:not(.close):not(.btn),
 .alert .alert-link {
   color: #fff;
   font-weight: bold;
