@@ -1,6 +1,6 @@
 {
-  "name": "example-site",
-  "description": "Workflow for static sites with Grunt.",
+  "name": "talks",
+  "description": "Slides from when I talked.",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": "^3.3.6",
