@@ -45,7 +45,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 	<ul>
 		<li>Most JS code can be divided into 3 categories:</li></ul>
 		<ol>
-		
+
 		<li>Files that need to be on every page</li>
 		<li>Files used by multiple components but not all pages</li>
 		<li>Files used by only one component</li>
@@ -157,7 +157,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 	<pre class="prettyprint">
     &lt;body&gt;
       &lt;script type="text/javascript"&gt;
-        /* Any code in here will 
+        /* Any code in here will
         block page rendering until it's done */
       &lt;/script&gt;
     &lt;/body&gt;
@@ -175,7 +175,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
     <li>Don't make it global! Avoid polluting the <code>global namespace</code> with <code>variables</code></li>
   </ul>
   <pre class="prettyprint">
-    var x = 0, y = 10; 
+    var x = 0, y = 10;
     function doSomething(x) { }
     function doSomethingElse(y) { }
 	</pre>
@@ -218,7 +218,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   (function() {
     var imLocal = true,
         meToo = 'wooHoo';
-        
+
     function doSomething() {}
     function anotherFunc() {}
   })();
@@ -259,7 +259,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   var count = 0;
   var length = 10;
   var words = 'Words words words';
-  
+
   /* Good */
   var count = 0,
       length = 10,
@@ -306,7 +306,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   window.onload = function() {
     /* I'm going to wait for everything on the page */
   };
-  
+
   $(document).ready(function() {
     /* I will run once the DOM is ready to be worked with */
   });
@@ -319,12 +319,12 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 	 <li>JavaScript should be used to enhance, not create functionality*</li>
 	</ul>
   <pre class="prettyprint">
-  /* Bad, bad, bad 
+  /* Bad, bad, bad
   Nothing will happen without JavaScript!
   */
   &lt;!-- HTML --&gt;
   &lt;a href="#" onclick="openSafetyInformation();"&gt;Safety&lt;/a&gt;
-  
+
   /* JS */
   function openSafetyInformation() {
     $('#safety-info').show();
@@ -339,7 +339,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   /* Good */
   &lt;!-- HTML --&gt;
   &lt;a href="safety.html" id="safety-btn"&gt;Safety&lt;/a&gt;
-  
+
   /* JS overrides normal link behavior */
   $('#safety-btn').click(function() {
     $('#safety').load('safety.html', function() {
@@ -358,7 +358,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 	 <li>JavaScript can write your HTML, add CSS to it and make it interactive</li>
 	</ul>
 	<pre class="prettyprint">
-  /* You know how to 
+  /* You know how to
   do this correctly */
   var emailForm = $('&lt;form/&gt;')
     .attr('action', '/search')
@@ -384,8 +384,8 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 	</ul>
   <pre class="prettyprint">
   /* This is valid but frowned upon */
-  if (testCondition) runThisCode()  
-  
+  if (testCondition) runThisCode()
+
   /* How about this instead? */
   if (testCondition) {
     runThisCode();
@@ -418,7 +418,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   <pre class="prettyprint">
   $('div.myClass'); // All divs with a class of 'myClass'
   $('div:animated'); // All divs that are being animated
-  $('input[name*="man"]'); /* All inputs with a name 
+  $('input[name*="man"]'); /* All inputs with a name
     attribute that contains 'man' */
   $('p:hidden'); // All paragraphs that are hidden
   $('td:eq(2)'); // The third td
@@ -438,7 +438,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
   .css('background','red') // Change background to red
   .addClass('active') // Add class active
   .wrap('&lt;div/&gt;'); // Wrap it in a div
-  
+
   /* Could also be all on one line */
   </pre>
 </div>
@@ -456,7 +456,7 @@ Not going to go over too much JS syntax. More of things that you might see or ne
     // This will fire once the call is finished
     console.log(data);
   });
-  
+
   // Grab all data from a form, POST to test.php
   $.post("test.php", $('#formId').serialize() );
   </pre>
@@ -482,13 +482,6 @@ Not going to go over too much JS syntax. More of things that you might see or ne
 
 
 </div> <!-- End #frame. DO NOT DELETE THIS! -->
-
-<script>
-    var _gaq=[['_setAccount','UA-8402584-4'],['_setDomainName','lukecod.es'],['_trackPageview'],['_trackPageLoadTime']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
 
 </body>
 </html>
