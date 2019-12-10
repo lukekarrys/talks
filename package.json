@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "connect-livereload": "^0.6.0",
-    "git-directory-deploy": "^1.5.0",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.0.0",
     "grunt-cli": "^1.2.0",
@@ -30,10 +29,6 @@
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production grunt build",
-    "codeship-setup": "npm install && npm run build",
-    "codeship-test": "npm run validate",
-    "deploy": "git-directory-deploy --directory public --username lukekarrys --email lukekarrys@gmail.com --repo git@github.com:lukekarrys/talks.git --message='--skip-ci'",
-    "start": "NODE_ENV=development grunt serve",
-    "validate": "npm ls >/dev/null"
+    "start": "NODE_ENV=development grunt serve"
   }
 }
