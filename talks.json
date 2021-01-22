@@ -2,22 +2,22 @@
   "fluentconf-native-web-apps-training": {
     "location": "FluentConf 2015",
     "title": "Native Web Apps Training",
-    "description": "A training at <a href='http://fluentconf.com/javascript-html-2015/public/schedule/grid/public'>FluentConf 2015</a> on building a modern, well-structured application from scratch by combining best-of breed approaches and a carefully curated set of tools like React, ES2015, Webpack, Node, and Ampersand. We built an <a href='https://github.com/HenrikJoreteg/labelr'>app</a>.",
+    "description": "A training at <a href='https://blog.andyet.com/2015/04/02/fluent-conf-native-web-apps/'>FluentConf 2015</a> on building a modern, well-structured application from scratch by combining best-of breed approaches and a carefully curated set of tools like React, ES2015, Webpack, Node, and Ampersand. We built an <a href='https://github.com/HenrikJoreteg/labelr'>app</a>.",
     "links": [
       {
         "title": "Detail",
-        "link": "http://fluentconf.com/javascript-html-2015/public/content/native-web-application"
+        "link": "https://blog.andyet.com/2015/04/02/fluent-conf-native-web-apps/"
       }
     ]
   },
   "jsla-ampersandjs-a-non-frameworky-framework": {
     "location": "JS.la Meetup October 2014",
     "title": "Ampersand.js: A Non-Frameworky Framework",
-    "description": "A talk at the <a href='http://js.la'>js.la meetup</a> about the <a href='http://ampersandjs.com'>Ampersand.js</a> \"framework\".",
+    "description": "A talk at the <a href='https://js.la'>js.la meetup</a> about the <a href='https://ampersandjs.com'>Ampersand.js</a> \"framework\".",
     "links": [
       {
         "title": "Slides",
-        "link": "http://lukekarrys.github.io/ampersand-jsla"
+        "link": "https://lukekarrys.github.io/ampersand-jsla"
       },
       {
         "title": "Video",
@@ -28,7 +28,7 @@
   "triconf-the-10-most-important-things-ive-learned-ever": {
     "location": "TriConf 2014",
     "title": "The 10 Most Important Things I've Learned, Ever",
-    "description": "A talk at <a href='http://triconf.com'>TriConf 2014</a> about the most important things I've ever learned.",
+    "description": "A talk at <a href='https://triconf.com'>TriConf 2014</a> about the most important things I've ever learned.",
     "links": [
       {
         "title": "Video",
@@ -43,11 +43,11 @@
   "nodesummit-client-solutions-from-development-to-production": {
     "location": "NodeSummit 2013",
     "title": "Client Solutions from Development to Production",
-    "description": "A talk at <a href='http://nodesummit.com'>NodeSummit 2013</a> about using Node for solutions in development and production environments.",
+    "description": "A talk at <a href='https://nodesummit.com'>NodeSummit 2013</a> about using Node for solutions in development and production environments.",
     "links": [
       {
         "title": "Slides",
-        "link": "http://lukekarrys.github.io/nodesummit"
+        "link": "https://lukekarrys.github.io/nodesummit"
       },
       {
         "title": "Video",
@@ -58,7 +58,7 @@
   "triconf-passion-and-purpose": {
     "location": "TriConf 2013",
     "title": "How To Get Your Dream Job in 5000 Words or Fewer and Live in the Woods and Work on The Internet",
-    "description": "A talk at <a href='http://triconf.com'>TriConf 2013</a> about passion and purpose.",
+    "description": "A talk at <a href='https://triconf.com'>TriConf 2013</a> about passion and purpose.",
     "links": [
       {
         "title": "Slides",
@@ -66,7 +66,7 @@
       },
       {
         "title": "Blog",
-        "link": "http://lukelov.es/articles/passion-and-purpose"
+        "link": "https://lukelov.es/articles/passion-and-purpose"
       },
       {
         "title": "Video",
@@ -77,7 +77,7 @@
   "triconf-backbone-tips-and-tricks": {
     "location": "TriConf 2013",
     "title": "Backbone: Tips &amp; Tricks",
-    "description": "A talk at <a href='http://triconf.com'>TriConf 2013</a> about Tips and Tricks in Backbone and ways to make it less cumbersome in web apps.",
+    "description": "A talk at <a href='https://triconf.com'>TriConf 2013</a> about Tips and Tricks in Backbone and ways to make it less cumbersome in web apps.",
     "links": [
       {
         "title": "Slides",
